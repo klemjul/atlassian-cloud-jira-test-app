@@ -1,15 +1,25 @@
 {
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2023,
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
+  "root": true,
+  "extends": [
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
   "plugins": [
+    "@typescript-eslint",
     "react-hooks"
   ],
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": [
+    "dist/",
+    "dist",
+    "cdk.out/",
+    "coverage/",
+    "node_modules/"
+  ],
   "rules": {
-    "react-hooks/rules-of-hooks": "error"
+    "react-hooks/rules-of-hooks": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

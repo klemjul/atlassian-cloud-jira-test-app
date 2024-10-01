@@ -1,18 +1,4 @@
 modules:
-  jira:issuePanel:
-    - key: atlassian-cloud-jira-test-app-hello-world-issue-panel
-      resource: main
-      resolver:
-        function: resolver
-      render: native
-      title: atlassian-cloud-jira-test-app
-      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
-  function:
-    - key: resolver
-      handler: index.handler
-resources:
-  - key: main
-    path: src/frontend/index.jsx
 app:
   runtime:
     name: nodejs20.x

@@ -1,5 +1,17 @@
 modules:
+  function:
+    - key: resolver
+      handler: index.handler
+    - key: random-user-admin-page
+      handler: index.renderRandomUserAdmin
+  jira:adminPage:
+    - key: random-user-admin
+      function: random-user-admin-page
+      title: Random user administration
 app:
   runtime:
     name: nodejs20.x
   id: #{FORGE_APP_ID}
+permissions:
+  scopes:
+    - storage:app

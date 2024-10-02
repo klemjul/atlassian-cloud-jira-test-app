@@ -1,14 +1,12 @@
 import { storage } from "@forge/api";
+import { RANDOM_USER_PREFERENCES_STORAGE_KEY } from "./constants";
 
 export interface RandomUserPreferences {
   gender: "female" | "male" | "random";
 }
 
 export class RandomUserPreferencesForgeStorage {
-  private static DEFAULT_STORAGE_KEY = "RANDOM_USER_PREFERENCES";
-  constructor(
-    private storageKey = RandomUserPreferencesForgeStorage.DEFAULT_STORAGE_KEY,
-  ) {}
+  constructor(private storageKey = RANDOM_USER_PREFERENCES_STORAGE_KEY) {}
 
   public async setPreferences(preferences: RandomUserPreferences) {
     await storage.set(this.storageKey, preferences);

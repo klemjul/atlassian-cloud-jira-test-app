@@ -1,13 +1,17 @@
 modules:
-  function:
-    - key: resolver
-      handler: index.handler
-    - key: random-user-admin-page
-      handler: index.renderRandomUserAdmin
   jira:adminPage:
     - key: random-user-admin
-      function: random-user-admin-page
+      render: native
+      resource: random-user-admin-page
+      resolver:
+        function: random-user-admin-res
       title: Random user administration
+  function:
+    - key: random-user-admin-res
+      handler: index.adminPageResolvers
+resources:
+  - key: random-user-admin-page
+    path: src/jira/adminPage.tsx
 app:
   runtime:
     name: nodejs20.x

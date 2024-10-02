@@ -1,1 +1,1 @@
-export { renderRandomUserAdmin } from "./random-user/admin";
+export { adminPageResolvers } from "./jira/adminPageResolvers";

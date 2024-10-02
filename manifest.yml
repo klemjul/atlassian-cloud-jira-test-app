@@ -6,7 +6,14 @@ modules:
       resolver:
         function: random-user-admin-res
       title: Random user administration
+  trigger: 
+    - key: issue-created-event
+      function: issue-created-handler
+      events:
+        - avi:jira:created:issue
   function:
+    - key: issue-created-handler
+      handler: index.issueCreatedHandler
     - key: random-user-admin-res
       handler: index.adminPageResolvers
 resources:
@@ -19,3 +26,5 @@ app:
 permissions:
   scopes:
     - storage:app
+    - write:jira-work
+    - read:jira-work

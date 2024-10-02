@@ -1,6 +1,6 @@
 # atlassian-cloud-jira-test-app
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira issue panel.
+This project contains a Forge app written in Javascript that that randomly adds generated user information on Jira issues.
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
@@ -9,10 +9,6 @@ See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/pl
 See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
 ## Quick start
-
-- Modify your app frontend by editing the `src/frontend/index.jsx` file.
-
-- Modify your app backend by editing the `src/resolvers/index.js` file to define resolver functions. See [Forge resolvers](https://developer.atlassian.com/platform/forge/runtime-reference/custom-ui-resolver/) for documentation on resolver functions.
 
 - Build and deploy your app by running:
 
@@ -32,12 +28,8 @@ forge install
 forge tunnel
 ```
 
-### Notes
+## Next steps
 
-- Use the `forge deploy` command when you want to persist code changes.
-- Use the `forge install` command when you want to install the app on a new site.
-- Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
-
-## Support
-
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+* Replace @forge/api Properties calls (WARN: The @forge/api Properties API is deprecated, you shoud now call product REST APIs directly.)
+* Experiment [Atlassian Custom UI](https://developer.atlassian.com/platform/forge/custom-ui/) with [Atlasskit components](https://atlassian.design/components/)
+* [Build a Confluence App](https://developer.atlassian.com/platform/forge/build-a-hello-world-app-in-confluence/)
